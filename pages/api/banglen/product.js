@@ -8,16 +8,6 @@ export default async function handler(req, res) {
     let data = await promiseA.json();
     let filtered_data = data.filter(function (item) {
         return item.category_name.includes("ข้าว");
-    });
-    for (let f of filtered_data) {
-        // console.log("HEY : ", f.product_id, f.product_name);
-        // const url2 = "https://dataapi.moc.go.th/gis-product-prices?product_id="+f.product_id+"&from_date=2021-01-01&to_date=2021-01-31";
-        // let promiseA2 = await fetch(url2);
-        // let data2 = await promiseA2.json();
-        // fs.writeFileSync("./json/"+f.product_id+".json", JSON.stringify(data2) )
-        fs.writeFileSync(__dirname+"/json/"+f.product_id+".json", JSON.stringify([1,2,3,4]) )
-        console.log(data2);
-        break;
-    }
+    });    
     res.status(200).json(filtered_data);
 }
