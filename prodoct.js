@@ -2,7 +2,7 @@
 const fs = require('fs');
 // import fetch from "node-fetch";
 const fetch = require('node-fetch');
-async function handler() {
+async function product() {
     // const url = "https://dataapi.moc.go.th/gis-products?keyword=ข้าว&sell_type=wholesale";
 
     const url = "http://localhost:3000/json/product-rice.json";
@@ -26,5 +26,4 @@ async function handler() {
     }
     // res.status(200).json(filtered_data);
 }
-
-handler()
+// product()
